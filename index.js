@@ -5,8 +5,10 @@ import { getJobs } from "./getJobs.js"
 const app = express()
 app.use(cors())
 
-app.get("/api/", (req, res) => {
-  res.send("Jobstreet API, try => /api/search?q=javascript")
+app.get("/", (req, res) => {
+  res.send(`<h1>Welcome to Jobstreet API!</h1>
+  <span>Try this api route => <code>/api/search?q=javascript</code></span>
+  <p>See this <a href="https://github.com/loydcose/jobstreet-api">repo</a> for more information, enjoy!</p>`)
 })
 
 app.get("/api/search", async (req, res) => {
