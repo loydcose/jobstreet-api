@@ -17,7 +17,7 @@ const getJobs = async (searchStr) => {
       // scrape job link
       const link = $(element).find("h1 > a")
       job.link = link.attr("href")
-        ? `https://jobstreet.ph${link.attr("href")}`
+        ? `https://www.jobstreet.com.ph${link.attr("href")}`
         : ""
 
       // scrape job title
